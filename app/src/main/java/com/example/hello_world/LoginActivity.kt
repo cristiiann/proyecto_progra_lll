@@ -1,12 +1,12 @@
 package com.example.hello_world
-
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_login.*
 
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -29,9 +29,12 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             progressBar.visibility = View.VISIBLE
+
+            val intent = Intent (this, OptionsActivity :: class.java)
+            startActivity(intent)
+
             
         }
-
 
     }
 }
