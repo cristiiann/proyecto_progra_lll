@@ -5,52 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="bottom"
-    android:background="#9F2727"
+    android:background="#EFE9E9"
     android:rotationX="0"
     tools:context=".OptionsActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonAdopta"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="120dp"
         android:layout_height="80dp"
         android:layout_marginStart="10dp"
         android:text=" Adopta perros"
-        app:backgroundTint="#383D42"
         app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintTop_toTopOf="@+id/button5" />
 
     <Button
         android:id="@+id/button5"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="120dp"
         android:layout_height="80dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="190dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="350dp"
         android:text="Encontre un perrito"
-        app:backgroundTint="#3C3D43"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="120dp"
         android:layout_height="80dp"
-        android:layout_marginStart="70dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="5dp"
         android:text="Se perdio mi perrito"
-        app:backgroundTint="#393A42"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5" />
 
     <Button
         android:id="@+id/button4"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="120dp"
         android:layout_height="80dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:text="Perritos en adopcion"
-        app:backgroundTint="#414249"
         app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdopta" />
 
     <TextView
         android:id="@+id/textView"
@@ -59,6 +59,18 @@
         android:text="Huellitas"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
