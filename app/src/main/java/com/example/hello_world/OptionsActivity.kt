@@ -12,11 +12,14 @@ class OptionsActivity : AppCompatActivity() {
         setContentView(R.layout.options_main)
 
         buttonAdopta.text = "Adopta mascotas"
-        buttonAdopta.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+        buttonAdopta.setOnClickListener{
+            val intent = Intent (this, FormularioAdopcionActivity::class.java)
             startActivity(intent)
-
         }
+
+
+
+
     }
 
 }
