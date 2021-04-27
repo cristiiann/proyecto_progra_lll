@@ -3,6 +3,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login.*
 
 
@@ -22,16 +23,15 @@ class LoginActivity : AppCompatActivity() {
 
             for (user in validUsersList){
                 if (user.username == username && user.password == password){
-                    textView.text = "usuario correcto"
+                    val intent = Intent (this, OptionsActivity::class.java)
+                    startActivity(intent)
                     break
                 } else {
-                    textView.text ="usuario incorrecto"
+                    Toast.makeText(this,"Login Incorrecto", Toast.LENGTH_SHORT).show()
                 }
             }
             progressBar.visibility = View.VISIBLE
 
-            val intent = Intent (this, OptionsActivity :: class.java)
-            startActivity(intent)
 
             
         }
