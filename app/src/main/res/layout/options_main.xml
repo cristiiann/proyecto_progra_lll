@@ -4,81 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C6D3D3"
+    android:background="@drawable/background_gradient"
     android:rotationX="0"
     tools:context=".OptionsActivity">
 
     <Button
         android:id="@+id/buttonAdopta"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="134dp"
-        android:layout_height="123dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="47dp"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/round_button_background"
         android:text=" Adopta una mascota"
+        android:textSize="16dp"
+        app:backgroundTint="#191818"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/buttonEncontre"
-        app:layout_constraintTop_toTopOf="@+id/buttonEncontre" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/buttonEncontre"
+        android:id="@+id/button5"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="134dp"
-        android:layout_height="123dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="268dp"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="232dp"
+        android:background="@drawable/round_button_background"
         android:text="Encontre una mascota"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="16dp"
+        app:backgroundTint="#191818"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button2"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="134dp"
-        android:layout_height="123dp"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/round_button_background"
         android:text="Se perdio mi mascota"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonEncontre" />
+        android:textSize="16dp"
+        app:backgroundTint="#191818"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button5" />
 
     <Button
         android:id="@+id/button4"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="134dp"
-        android:layout_height="123dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="47dp"
+        android:layout_width="0dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/round_button_background"
         android:text="Lista de mascotas en adopcion/perdidas"
+        android:textSize="16dp"
+        app:backgroundTint="#191818"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAdopta" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Huellitas"
-        android:textColor="#0B0B0B"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="333dp"
-        android:layout_height="348dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="290dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="246dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:srcCompat="@drawable/logo" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#3A3A3A"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/activity_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
