@@ -17,8 +17,8 @@ class OptionsActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
-
+         val intent = Intent ( packageContext: this  RegistroPerdidaActivity:: class.java)
+        startActivity(intent)
 
     }
 
