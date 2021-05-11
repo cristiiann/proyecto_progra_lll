@@ -26,4 +26,8 @@ class PabloSharedPreferencesManager {
             return listOf()
         }
     }
+
+    fun DevolverDatosMascota(context: Context)
+
+    }
 }

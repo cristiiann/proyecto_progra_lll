@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello_world">
-        <activity android:name=".CrearCuentaActivity"></activity>
+        <activity android:name=".ListaMascotasActivity"></activity>
+        <activity android:name=".CrearCuentaActivity" />
         <activity android:name=".FormularioAdopcionActivity" />
-        <activity android:name=".FormularioSePerdioMiMascotaActivity"></activity>
+        <activity android:name=".FormularioSePerdioMiMascotaActivity" />
         <activity android:name=".FormularioEncontreUnaMascotaActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
