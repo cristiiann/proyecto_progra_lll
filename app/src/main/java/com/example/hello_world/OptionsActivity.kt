@@ -17,6 +17,12 @@ class OptionsActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        buttonEncontre.text = "Encontre un perrito"
+        buttonEncontre.setOnClickListener{
+            val intent = Intent (this, FormularioencontrarActivity::class.java)
+            startActivity(intent)
+        }
+
 
 
 

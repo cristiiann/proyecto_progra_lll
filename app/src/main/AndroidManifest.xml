@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hello_world">
-        <activity android:name=".FormularioAdopcionActivity"></activity>
+        <activity android:name=".Registro_MascotaEncontrada_Activity"></activity>
+        <activity android:name=".FormularioencontrarActivity" />
+        <activity android:name=".FormularioAdopcionActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
