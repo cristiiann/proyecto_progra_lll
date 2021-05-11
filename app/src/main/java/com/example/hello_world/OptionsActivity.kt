@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.options_main.*
 import kotlin.math.truncate
 
@@ -24,11 +25,6 @@ class OptionsActivity : AppCompatActivity() {
         val user = TemporalStorage.usuario!!
 
 
-        buttonAdopta.setOnClickListener{
-            val intent = Intent (this, FormularioAdopcionActivity::class.java)
-            startActivity(intent)
-        }
-
         toolbar.title = "Bienvenido " + user.username
 
         toolbar.setOnMenuItemClickListener { menuItem ->
@@ -39,6 +35,21 @@ class OptionsActivity : AppCompatActivity() {
                 }
             }
             true
+        }
+
+        buttonAdopta.setOnClickListener{
+            val intent = Intent (this, FormularioAdopcionActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonEncontreUnaMacota.setOnClickListener{
+            val intent = Intent (this, FormularioEncontreUnaMascotaActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonSePerdioMiMascota.setOnClickListener{
+            val intent = Intent (this, FormularioSePerdioMiMascotaActivity::class.java)
+            startActivity(intent)
         }
     }
 }

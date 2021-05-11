@@ -102,7 +102,7 @@
         android:layout_marginTop="6dp"
         android:text="Datos del Registro"
         android:textColor="#171717"
-        android:textSize="30sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"

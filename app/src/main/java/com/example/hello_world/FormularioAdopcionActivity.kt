@@ -7,18 +7,19 @@ import android.os.Bundle
 import com.google.gson.annotations.Expose
 import kotlinx.android.synthetic.main.activity_formulario_adopcion.*
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_registro_perdida.*
+
 
 class FormularioAdopcionActivity : AppCompatActivity() {
 
-    private var fileUri: Nothing? = null
+    private var fileUri: Uri? = null
     private val requestCodeGallery = 123
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registro_perdida)
+        setContentView(R.layout.activity_formulario_adopcion)
 
 
-        buttonGallery.setOnClickListener {
+        ButtonSubirImagen.setOnClickListener {
             val intent = Intent()
             intent.action = Intent.ACTION_PICK
             intent.type = "image/*"
@@ -28,26 +29,22 @@ class FormularioAdopcionActivity : AppCompatActivity() {
             )
         }
 
-        buttonPublicar.setOnClickListener {
+        buttonAgregarAdopcion.setOnClickListener {
             val newFormularioAdopcion = FormularioAdopcion(
-                fileUri,
-                editTextNombre.text.toString(),
-                editTextCiudad.text.toString(),
-                editTextSalud.text.toString(),
-                editTextPersonalidad.text.toString(),
-                editTextEdad.text.toString()
-            )
+                    fileUri,
+                editTextNombre.text.toString(), editTextCiudad.text.toString(), editTextSalud.text.toString(), editTextPersonalidad.text.toString(), editTextEdad.text.toString())
             FormularioAdopcionTemporal.AddAdopcionActivity.add(newFormularioAdopcion)
             finish()
         }
 
-    }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == requestCodeGallery) {
-            imageView.setImageURI(data?.data)
-            fileUri = data?.data as Nothing?
+        fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+            super.onActivityResult(requestCode, resultCode, data)
+            if (requestCode == requestCodeGallery) {
+                imageView.setImageURI(data?.data)
+                fileUri = data?.data
+
+            }
 
         }
 
