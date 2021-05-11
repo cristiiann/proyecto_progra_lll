@@ -63,3 +63,4 @@ class SharedPreferencesManager {
         prefsEditor.apply()
     }
 }
+
