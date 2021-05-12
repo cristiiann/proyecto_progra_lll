@@ -28,6 +28,9 @@ class LoginActivity : AppCompatActivity() {
         val validUsers = sharedPreferencesManager.obtenerUsuarios(this)
             for(validUser in validUsers){
                 if(validUser.username == username && validUser.password == password) {
+                    if(checkBoxRecuerdame.isChecked){
+                        sharedPreferencesManager.guardarUsuarioInicioSesion(this,validUser)
+                    }
                     sharedPreferencesManager.guardarUsuarioInicioSesion(this,validUser)
                     TemporalStorage.usuario = validUser
                     val intent = Intent(this, OptionsActivity::class.java)
@@ -42,19 +45,6 @@ class LoginActivity : AppCompatActivity() {
         progressBar.visibility = View.VISIBLE
 
             val intent = Intent ()
-
-
-            Handler(Looper.getMainLooper()).postDelayed({
-                progressBarInicio.progress = 33
-            }, 1000)
-
-            Handler(Looper.getMainLooper()).postDelayed({
-                progressBarInicio.progress = 67
-            }, 2000)
-
-            Handler(Looper.getMainLooper()).postDelayed({
-                progressBarInicio.progress = 100
-            }, 3000)
 
     }
         val usuarioInicioSesion = sharedPreferencesManager.obtenerUsuarioInicioSesion(this)

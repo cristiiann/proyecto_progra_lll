@@ -13,14 +13,14 @@
         android:layout_height="75dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="136dp"
         android:background="@drawable/round_button_background"
         android:text="Registrarte"
         android:textSize="16sp"
         app:backgroundTint="#0B0A0A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -29,13 +29,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="60dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/AbrirCuentabutton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="22dp"
         android:ems="10"
         android:hint="Nombre de usuario"
         android:inputType="textEmailAddress"
@@ -59,7 +59,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="39dp"
         android:ems="10"
         android:hint="Nombre"
         android:inputType="textEmailAddress"
@@ -74,7 +74,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="39dp"
         android:ems="10"
         android:hint="Apellidos"
         android:inputType="textEmailAddress"
@@ -88,7 +88,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="22dp"
         app:layout_constraintBottom_toTopOf="@+id/IngresarNombreUsuarioText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -113,13 +113,24 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
+        android:layout_marginStart="32dp"
         android:layout_marginBottom="2dp"
         android:text="Ciudad"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/spinnerCiudades"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="175dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

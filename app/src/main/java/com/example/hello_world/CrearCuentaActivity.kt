@@ -22,7 +22,7 @@ class CrearCuentaActivity : AppCompatActivity() {
 
 
         AbrirCuentabutton.setOnClickListener{
-            val usuarioAGuardar = NuevoUsuario(NombresText.text.toString(), ApellidosText.text.toString() ,IngresarNombreUsuarioText.text.toString(),IngresePasswordText.text.toString())
+            val usuarioAGuardar = NuevoUsuario(NombresText.text.toString(), ApellidosText.text.toString() ,spinnerCiudades.selectedItem.toString(),IngresarNombreUsuarioText.text.toString(),IngresePasswordText.text.toString())
             sharedPreferencesManager.crearUsuarioNuevo(this, usuarioAGuardar)
             finish()
 
@@ -32,4 +32,4 @@ class CrearCuentaActivity : AppCompatActivity() {
             }
 
 }
- data class NuevoUsuario(@Expose val nombres: String, @Expose val apellidos: String, @Expose val username: String, @Expose val password: String):Serializable
+ data class NuevoUsuario(@Expose val nombres: String, @Expose val apellidos: String, @Expose val ciudades: String ,  @Expose val username: String, @Expose val password: String):Serializable
