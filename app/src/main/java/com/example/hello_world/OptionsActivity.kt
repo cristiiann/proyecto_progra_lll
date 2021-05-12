@@ -51,6 +51,10 @@ class OptionsActivity : AppCompatActivity() {
             val intent = Intent (this, FormularioSePerdioMiMascotaActivity::class.java)
             startActivity(intent)
         }
+        buttonListasDeMascotasAdopcionPerdidas.setOnClickListener {
+            val intent = Intent (this, ListaMascotasActivity::class.java )
+            startActivity(intent)
+        }
     }
 }
 
